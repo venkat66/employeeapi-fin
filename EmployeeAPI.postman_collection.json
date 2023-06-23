@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "252b0c35-0edc-49f8-9844-b6930fe2abef",
+		"name": "EmployeeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21536450"
+	},
+	"item": [
+		{
+			"name": "Employee List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"xyz\",\r\n  \"email\": \"fgh@gmail.com\",\r\n  \"age\": 25,\r\n  \"gender\": \"male\",\r\n  \"phoneNo\": \"8745874587\",\r\n  \"addressDetails\": {\r\n    \"hno\": \"123\",\r\n    \"street\": \"xyz\",\r\n    \"city\": \"xyz\",\r\n    \"state\": \"xyz\"\r\n  },\r\n  \"workExperience\": [\r\n    {\r\n      \"companyName\": \"xyz\",\r\n      \"fromDate\": \"20-05-2019\",\r\n      \"toDate\": \"20-09-2021\",\r\n      \"address\": \"xyz\"\r\n    }\r\n  ],\r\n  \"qualifications\": [\r\n    {\r\n      \"qualificationName\": \"ssc\",\r\n      \"fromDate\": \"20-05-2012\",\r\n      \"toDate\": \"20-05-2013\",\r\n      \"percentage\": 85\r\n    }\r\n  ],\r\n  \"projects\": [\r\n    {\r\n      \"title\": \"xyz\",\r\n      \"description\": \"description of the project\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update  Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "regid",
+							"value": "EMP004",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "sams",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sam@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "phoneNo",
+							"value": "8652145878",
+							"type": "text"
+						},
+						{
+							"key": "addressDetails",
+							"value": "{\n    \"hno\": \"123\",\n    \"street\": \"xyz\",\n    \"city\": \"xyz\",\n    \"state\": \"xyz\"\n  }",
+							"type": "text"
+						},
+						{
+							"key": "workExperience",
+							"value": "[\n    {\n      \"companyName\": \"xyz\",\n      \"fromDate\": \"20-05-2019\",\n      \"toDate\": \"20-09-2021\",\n      \"address\": \"xyz\"\n    }\n  ]",
+							"type": "text"
+						},
+						{
+							"key": "qualifications",
+							"value": "[\n    {\n      \"qualificationName\": \"ssc\",\n      \"fromDate\": \"20-05-2012\",\n      \"toDate\": \"20-05-2013\",\n      \"percentage\": 85\n    }\n  ]",
+							"type": "text"
+						},
+						{
+							"key": "projects",
+							"value": "[\n    {\n      \"title\": \"xyz\",\n      \"description\": \"description of the project\"\n    }\n  ]",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/D:/Others/demo images/gallery-03.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/update/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/delete/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee/?regid=EMP001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						""
+					],
+					"query": [
+						{
+							"key": "regid",
+							"value": "EMP001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Endpoints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
