@@ -53,9 +53,9 @@ class EmployeeCreateAPIView(APIView):
                 
                 serializer.save()
                 data = Employee.objects.filter(email=email).first()
-                data_serializer = EmployeeDetailSerializer(data)
+                dataSerializer = EmployeeDetailSerializer(data)
                 return Response(
-                    {"message": "Employee created successfully", "regid": data_serializer.data['regid'], "success": True},
+                    {"message": "Employee created successfully", "regid": dataSerializer.data['regid'], "success": True},
                     status=status.HTTP_200_OK
                 )
             else:
